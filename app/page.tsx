@@ -1,4 +1,5 @@
 'use client'
+import { Suspense } from 'react';
 import { useQuery } from '@tanstack/react-query';
 
 const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
@@ -29,8 +30,11 @@ export default function Home() {
   if (error instanceof Error) return <p>Error: {error.message}</p>;
 
   return (
+    <Suspense fallback={<div>Loading...</div>}>
+
     <div>
              <Results results={results || []} />
     </div>
+    </Suspense>
   );
 }

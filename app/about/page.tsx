@@ -1,5 +1,11 @@
+ 'use client'
+ import { Suspense } from 'react';
+
+ 
 export default function About() {
     return (
+      <Suspense fallback={<div>Loading...</div>}>
+
       <div className='max-w-6xl mx-auto p-3 space-y-4'>
         <h1 className='text-2xl font-medium text-amber-600'>About</h1>
         <p>
@@ -32,5 +38,7 @@ export default function About() {
           website. Happy browsing!
         </p>
       </div>
+      </Suspense>
+
     );
   }

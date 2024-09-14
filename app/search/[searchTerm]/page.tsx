@@ -1,3 +1,4 @@
+
 import Results from '@/components/Results';
 
 interface SearchPageProps {
