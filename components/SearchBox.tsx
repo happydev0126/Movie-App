@@ -15,6 +15,7 @@ export default function SearchBox() {
   };
 
   return (
+    <div suppressHydrationWarning={true}>
     <form
       className="flex justify-between px-5 max-w-6xl mx-auto"
       onSubmit={handleSubmit}
@@ -33,5 +34,6 @@ export default function SearchBox() {
         Search
       </button>
     </form>
+    </div>
   );
 }

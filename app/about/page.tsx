@@ -4,6 +4,7 @@
  
 export default function About() {
     return (
+      <div>
       <Suspense fallback={<div>Loading...</div>}>
 
       <div className='max-w-6xl mx-auto p-3 space-y-4'>
@@ -39,6 +40,7 @@ export default function About() {
         </p>
       </div>
       </Suspense>
+      </div>
 
     );
   }
